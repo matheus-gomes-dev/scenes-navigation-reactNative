@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Image } from 'react-native';
+import { View, Image, StyleSheet } from 'react-native';
 
 import Navibar from './Navibar'
 
@@ -15,12 +15,36 @@ export default class App extends React.Component {
     return (
     	<View>
       		<Navibar />
-      		<Image source={logo} />
-      		<Image source={menuCliente} />
-      		<Image source={menuContato} />
-      		<Image source={menuEmpresa} />
-      		<Image source={menuServico} />
+      		<View style={styles.logo}>
+	      		<Image source={logo} />
+	      	</View>
+	      	<View style={styles.menu}>
+		      	<View style={styles.groupMenu}>
+		      		<Image style={styles.imgMenu} source={menuCliente} />
+		      		<Image style={styles.imgMenu} source={menuContato} />
+		      	</View>
+		      	<View style={styles.groupMenu}>
+		      		<Image style={styles.imgMenu} source={menuEmpresa} />
+		      		<Image style={styles.imgMenu} source={menuServico} />
+		      	</View>
+		    </View>
       	</View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+	logo: {
+		marginTop: 30,
+		alignItems: 'center'
+	},
+	menu: {
+		alignItems: 'center',
+	},
+	groupMenu: {
+		flexDirection: 'row'
+	},
+	imgMenu: {
+		margin: 15
+	}
+})

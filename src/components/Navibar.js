@@ -16,13 +16,13 @@ export default class Navibar extends React.Component {
 const styles = StyleSheet.create({
 	titleBar: {
 		backgroundColor: '#CCC',
-		justifyContent: 'center',
-		alignItems: 'center',
-		flex: 0.15
+		height: 80
 	},
 	title: {
+		flex: 1,
 		fontSize: 18,
-		paddingTop: 20,
-		color: '#000'
+		textAlign: 'center',
+		color: '#000',
+		paddingTop: 40
 	}
 })

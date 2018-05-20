@@ -6,7 +6,7 @@ import { Text, View, StyleSheet } from 'react-native';
 export default class Navibar extends React.Component {
   render() {
     return (
-      <View style={styles.barraTitulo}>
+      <View style={styles.titleBar}>
       	<Text style={styles.title}>ATM Consultoria</Text>
       </View>
     );
@@ -15,14 +15,14 @@ export default class Navibar extends React.Component {
 
 const styles = StyleSheet.create({
 	titleBar: {
-		background-color: '#CCC',
-		padding: 10,
-		height: 60
+		backgroundColor: '#CCC',
+		justifyContent: 'center',
+		alignItems: 'center',
+		flex: 0.15
 	},
 	title: {
-		flex: 1,
 		fontSize: 18,
-		textAlign: 'center',
+		paddingTop: 20,
 		color: '#000'
 	}
 })
